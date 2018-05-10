@@ -80,8 +80,8 @@ export default {
             const globalEvent = weex.requireModule('globalEvent')
             globalEvent.addEventListener('homeBack', options => {
                 (this.curHomeBackTriggerTimes === this.maxHomeBackTriggerTimes) && this.$router.finish()
-                this.curHomeBackTriggerTimes++
                 this.$notice.toast({ message: `点击返回${this.maxHomeBackTriggerTimes}次之后，会关闭应用，当前点击第${this.curHomeBackTriggerTimes}次` })
+                 this.curHomeBackTriggerTimes++   
             })
         }
     }
